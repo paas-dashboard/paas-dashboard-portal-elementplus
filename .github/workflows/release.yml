@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
       - run: pnpm install
       - run: pnpm run build
       - run: tar -czvf paas-dashboard-portal.tar.gz dist
